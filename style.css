@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #3A6D8C;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 90%;
+    max-width: 800px;
+    background-color: #6A9AB0;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.left-info {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: url("images/image1.webp");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 25px 0 0 25px;
+    transition: all 0.3s ease;
+}
+
+.left-info:hover {
+    transform: scale(1.03) perspective(200px);
+}
+
+.pic-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #001F3F 40%, #EAD8B1 100%);
+    border-radius: 25px 0 0 25px;
+    opacity: 0.5;
+}
+
+.today-info {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.today-info h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.today-info span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.today-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.today-weather {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.today-weather .bx {
+    font-size: 3rem;
+}
+
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.right-info {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.day-info div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.day-info div .title {
+    font-weight: 600;
+}
+
+.days-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.days-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.days-list li:hover {
+    transform: scale(1.1);
+    background: #EAD8B1;
+    color: #3A6D8C;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.days-list li .bx {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.days-list li .day-temp {
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.loc-button {
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background: #001F3F;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.loc-button:hover {
+    background: #3A6D8C;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-info, .right-info {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        padding: 20px 10px;
+    }
+
+    .left-info {
+        border-radius: 25px 25px 0 0;
+    }
+
+    .right-info {
+        border-radius: 0 0 25px 25px;
+    }
+
+    .days-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .days-list li {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .loc-button {
+        width: 100%;
+    }
+}
